@@ -1,10 +1,13 @@
-#Validate
-####Installation:
+Validate
+=
+Installation:
+-
 >Copy file Validate.php to folder with your classes
 >
 >Insert instance of databases in ```__construct(PDO $getInstance);```
 
-####Validation methods:
+Validation methods:
+-
 ```php
 /*
 $source - input data
@@ -25,7 +28,8 @@ errors(); // get all errors
 passed(); // if you want to finish validation use passed()
 ```
 
-####You can use the existing cases or create new
+You can use the existing cases or create new:
+-
 |Cases|Description|
   |:---|:----|
   | min | Check that a string has at least a certain number of characters |

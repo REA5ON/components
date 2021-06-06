@@ -1,10 +1,11 @@
-#Flash
-##Installation:
-
+Flash
+=
+Installation:
+-
 >Copy Flash.php to folder with classes in your project
 
-##Usage:
-
+Usage:
+-
 + Connect the session at the beginning of the file. 
 + The flashMessage method writes a message to the session if name and string was passed.
 + Display a message using the same flashMessage method 
@@ -24,13 +25,14 @@ class Flash {
     }
 }
 ```
-####If you want to set message 'Done':
-
+If you want to set message 'Done':
+-
 ```php
 Flash::flashMessage('success', 'Done!'); //save to $_SESSION flash message ['name' => 'string'];
 
 ```
-####If want to check and return message:
+If want to check and return message:
+-
 ```php
 Flash::flashMessage('success'); //check $_SESSION for key 'success' and show value;
 ```

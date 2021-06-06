@@ -1,27 +1,32 @@
-#Query Builder
+Query Builder
+=
 QueryBuilder is an easy component to create SQL Queries.
 Supports databases which are supported by PDO.
-###Installation:
+Installation:
 
 >Copy folder to the project root.
 
-###How it works?:
-
+How it works?:
+-
 >Just to pass PDO object in __construct (PDO);
 
-###Table 'peoples' :
+Table 'peoples' :
+-
 | id|name|age|
   |---|:----:|---|
   | 1 | John |16|
   | 2 | Jane |12|
   | 3 | Ralf | 5|
+*You must use autoincrement in yours SQL 
 
 ```php
-$database = new QueryBuilder();
+$database = new QueryBuilder();// create new object
 ```
-##Query Builder Methods:
-###SELECT
-+ ####Get all table (getAll('table'))
+Query Builder Methods:
+-
+SELECT
+-
++ Get all table (getAll('table'))
   ```php
    //the table you need
    $database->getAll('peoples');
@@ -46,7 +51,7 @@ $database = new QueryBuilder();
             ],
        ]
         ```
-+ ####Get one string from the table (getOne('table', 'id');).
++ Get one string from the table (getOne('table', 'id');).
    ```php
    //table - the table you need, id - the string you need
    $database->getOne('peoples', '2');
@@ -60,13 +65,13 @@ $database = new QueryBuilder();
         ];
         ```
 ***
-###INSERT
-+ ####Insert array[ ] to the table (create('table', ['data']))
+INSERT
+-
++ Insert array[ ] to the table (create('table', ['data']))
    ```php
    //table - the table you need, array[] - data to create
   $database->create('peoples', ['name' => 'Dan', 'age' => '22'];
    ```
- *You must use autoincrement in yours SQL 
 + Result:
 
 | id|name|age|
@@ -76,8 +81,9 @@ $database = new QueryBuilder();
   | 3 | Ralf | 5|
   | 4 | Dan | 22|
 ***
-###UPDATE
-+ ####Update string in the table (update('table', 'id', ['data']))
+UPDATE
+-
++ Update string in the table (update('table', 'id', ['data']))
    ```php
    //table - the table you need, id - the string you need to update, array[] - data to update
   $database->update('peoples', '2', ['name' => 'Mary', 'age' => '18');
@@ -90,8 +96,9 @@ $database = new QueryBuilder();
   | 2 | Mary |18|
   | 3 | Ralf | 5|
 ***
-###DELETE
-+ ####Delete string in the table (delete('table', 'id'))
+DELETE
+-
++ Delete string in the table (delete('table', 'id'))
    ```php
    //table - the table you need, id - the string you need to delete
   $database->delete('peoples', 1);

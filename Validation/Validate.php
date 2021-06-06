@@ -4,7 +4,7 @@ class Validate
 {
     private $passed = false, $errors = [], $db = null;
 
-    public function __construct($getInstance)
+    public function __construct(PDO $getInstance)
     {
         $this->db = $getInstance;
     }

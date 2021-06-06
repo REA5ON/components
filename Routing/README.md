@@ -30,5 +30,5 @@ if (array_key_exists($route, $routes)) {
 }
 ```
 ####Step 3:
->Create new controllers. 
+>Create new controllers. Register new controllers in index.php. 
 

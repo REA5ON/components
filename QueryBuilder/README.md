@@ -7,8 +7,7 @@ Supports databases which are supported by PDO.
 
 ###How it works?:
 
->Just include file /QueryBuilder/start.php and then assign to variable in your project:
-$database = include '/start.php';
+>Just to pass PDO object in __construct (PDO);
 
 ###Table 'peoples' :
 | id|name|age|
@@ -16,6 +15,10 @@ $database = include '/start.php';
   | 1 | John |16|
   | 2 | Jane |12|
   | 3 | Ralf | 5|
+
+```php
+$database = new QueryBuilder();
+```
 ##Query Builder Methods:
 ###SELECT
 + ####Get all table (getAll('table'))

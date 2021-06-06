@@ -13,7 +13,7 @@ if you pass the message name as an argument and if there is one in the session.
 ```php
 class Flash {
 
-    public static function flashMessage($name, $string = '') {
+    public static function flashMessage(string $name, string $string = '') {
         if(isset($_SESSION[$name]) && $_SESSION[$name] !== '') { //show message
             $session = $_SESSION[$name];
             unset($_SESSION[$name]);

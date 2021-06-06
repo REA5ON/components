@@ -2,7 +2,7 @@
 ####Installation:
 >Copy file Validate.php to folder with your classes
 >
->Insert instance of databases in ```__construct($database);```
+>Insert instance of databases in ```__construct(PDO $getInstance);```
 
 ####Validation methods:
 ```php
